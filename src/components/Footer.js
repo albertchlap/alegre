@@ -8,6 +8,7 @@ const Container = styled.footer`
   position: absolute;
   bottom: 0;
   width: 100%;
+  margin-top: 50px !important;
 `;
 
 const FooterText = styled.p``;
