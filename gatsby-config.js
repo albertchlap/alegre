@@ -30,7 +30,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "https://alegreimports.herokuapp.com",
+        apiURL: process.env.DEPLOY_URL
+          ? "https://YOUR-APP-URL.herokuapp.com"
+          : "http://localhost:1337",
         queryLimit: 5000, // Default to 100
         contentTypes: [
           `hero-images`,
