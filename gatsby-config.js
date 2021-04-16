@@ -3,9 +3,10 @@ module.exports = {
     title: "alegre",
   },
   plugins: [
-    "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-anchor-links`,
     "gatsby-transformer-remark",
 
     {
@@ -26,13 +27,23 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    "gatsby-plugin-styled-components",
 
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.DEPLOY_URL
-          ? "https://alegreimports.herokuapp.com"
-          : "http://localhost:1337",
+        apiURL: "https://alegreimports.herokuapp.com",
+        // apiURL: process.env.DEPLOY_URL
+        //   ? "https://alegreimports.herokuapp.com"
+        //   : "http://localhost:1337",
         queryLimit: 5000, // Default to 100
         contentTypes: [
           `hero-images`,
