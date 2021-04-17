@@ -19,6 +19,7 @@ const ContactTitle = styled.h2`
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: start;
   align-items: center;
   width: 700px;
@@ -107,8 +108,8 @@ const Contact = () => {
         data-sal='fade'
         data-sal-delay='200'
         data-sal-duration='800'
-        data-sal-easing='ease'
-        id='contact'>
+        data-sal-easing='ease'>
+        <div id='contact' style={{ position: "absolute", top: "-90px" }} />
         <ContactTitle>Get in Touch</ContactTitle>
         <InputContainer>
           <HalfInput>

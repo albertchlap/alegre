@@ -75,7 +75,7 @@ const About = () => {
   return (
     <Container id='about'>
       <TextWrapper>
-        <Title>We can open the door to Canada for you</Title>
+        <Title>Alegre Imports opens the door to Canada</Title>
         <TextOne
           data-sal='slide-right'
           data-sal-delay='300'

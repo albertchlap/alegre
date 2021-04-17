@@ -74,6 +74,7 @@ const Values = () => {
 
     return (
       <Box
+        key={i}
         data-sal='flip-up'
         data-sal-delay={delay}
         data-sal-duration='1000'

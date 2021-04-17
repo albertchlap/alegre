@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 
 const Container = styled.div`
   padding-bottom: 50px;
+  margin-top: 90px;
 `;
 
 const Title = styled.h1`

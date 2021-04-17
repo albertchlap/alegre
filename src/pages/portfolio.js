@@ -9,6 +9,7 @@ import Layout from "../components/Layout";
 const Container = styled.div`
   min-height: 100vh;
   padding-bottom: 50px;
+  margin-top: 90px;
 `;
 
 const Grid = styled.div`
