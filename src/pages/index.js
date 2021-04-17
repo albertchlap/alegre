@@ -7,9 +7,7 @@ import Layout from "../components/Layout";
 import Values from "../components/Values";
 import ViewProducts from "../components/ViewProducts";
 
-const Container = styled.div`
-  margin-top: 90px;
-`;
+const Container = styled.div``;
 
 const Index = () => {
   return (

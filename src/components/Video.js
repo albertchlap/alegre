@@ -20,6 +20,7 @@ const Video = () => {
           height: "inherit",
           width: "inherit",
           objectFit: "cover",
+          zIndex: "50 !important",
         }}
         muted
         loop
