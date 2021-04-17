@@ -65,11 +65,17 @@ const Values = () => {
     }
   `);
 
+  let delay = 100;
+
   const values = data.allStrapiValues.edges.map((edge, i) => {
+    if (i !== 0) {
+      delay += 300;
+    }
+
     return (
       <Box
         data-sal='flip-up'
-        data-sal-delay='100'
+        data-sal-delay={delay}
         data-sal-duration='1000'
         data-sal-easing='ease'>
         {i === 0 ? <StyledFlag /> : i === 1 ? <VisionIcon /> : <ValueIcon />}

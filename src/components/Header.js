@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import Logo from "../images/alegre-logo.svg";
+import Menu from "../components/Menu";
 
 const Container = styled.header`
   height: 90px;
@@ -29,11 +32,11 @@ const ListItems = styled.ul`
   @media screen and (max-width: 768px) {
     display: none;
   }
-  /* & a {
+  & a {
     display: flex;
     justify-content: center;
     text-decoration: none;
-  } */
+  }
 `;
 
 const Item = styled.li`
@@ -51,16 +54,29 @@ const Item = styled.li`
 const Header = () => {
   return (
     <Container>
+      <Menu />
       <LogoWrapper>
-        <img src={Logo} alt='Alegre Imports' width='190px' height='70px' />
+        <AnchorLink to='/#home'>
+          <img src={Logo} alt='Alegre Imports' width='190px' height='70px' />
+        </AnchorLink>
       </LogoWrapper>
       <Navbar>
         <ListItems>
-          <Item>Home</Item>
-          <Item>About</Item>
-          <Item>Portfolio</Item>
-          <Item>LCBO/SAQ</Item>
-          <Item>Contact</Item>
+          <AnchorLink to='/#home'>
+            <Item>Home</Item>
+          </AnchorLink>
+          <AnchorLink to='/#about'>
+            <Item>About</Item>
+          </AnchorLink>
+          <Link to='/portfolio'>
+            <Item>Portfolio</Item>
+          </Link>
+          <Link to='/sales'>
+            <Item>LCBO/SAQ</Item>
+          </Link>
+          <AnchorLink to='/#contact'>
+            <Item>Contact</Item>
+          </AnchorLink>
         </ListItems>
       </Navbar>
     </Container>

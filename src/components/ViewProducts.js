@@ -54,8 +54,10 @@ const ViewProducts = () => {
     <Container>
       <Video />
       <ContentWrapper>
-        <Text>View Our Products</Text>
-        <Button primary>Our Brands</Button>
+        <Text>Brands we Represent</Text>
+        <Link to='/portfolio'>
+          <Button primary>Our Portfolio</Button>
+        </Link>
       </ContentWrapper>
     </Container>
   );

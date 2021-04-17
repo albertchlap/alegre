@@ -88,7 +88,7 @@ const Hero = () => {
         data-sal-delay='200'
         data-sal-duration='800'
         data-sal-easing='ease'>
-        <HeroHeader>Canada is at your Doorstep</HeroHeader>
+        <HeroHeader>Bringing the World to Canada</HeroHeader>
       </ContentWrapper>
       <div className='slide-container'>
         <Fade

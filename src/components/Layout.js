@@ -4,6 +4,8 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/rubik";
 import Header from "./Header";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
+import MenuBackground from "./MenuBackground";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -19,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     position: relative;
     overflow-x: hidden;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: var(--color);
     letter-spacing: 2px;
     width: 100%;
@@ -27,12 +29,22 @@ const GlobalStyle = createGlobalStyle`
     background: var(--background);
   }
 
+  p {
+    letter-spacing: 1px;
+  }
+
 `;
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <link
+          href='https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital@0;1&family=Nunito&display=swap'
+          rel='stylesheet'></link>
+      </Helmet>
       <GlobalStyle />
+      <MenuBackground />
       <Header />
       {children}
       <Footer />

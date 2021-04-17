@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { Helmet } from "react-helmet";
 
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -74,6 +73,7 @@ const Title = styled.h2`
   margin-bottom: 60px;
   color: #333;
   text-decoration: none;
+  text-align: center;
 `;
 
 const ImgContainer = styled.div`
@@ -88,6 +88,7 @@ const Country = styled.h4``;
 
 const Description = styled.p`
   text-align: center;
+  padding-bottom: 10px;
 `;
 
 const Portfolio = () => {
@@ -101,6 +102,7 @@ const Portfolio = () => {
             Category
             slug
             strapiId
+            Style
             image {
               childImageSharp {
                 gatsbyImageData(
@@ -121,19 +123,19 @@ const Portfolio = () => {
     const image = getImage(item.node.image);
 
     return (
-      // <Link
-      //   key={item.node.st}
-      //   to={`/portfolio/${item.node.slug}`}
-      //   style={{ color: "#333", textDecoration: "none" }}>
-      <GridItem>
-        <Title>{item.node.Brand}</Title>
-        <ImgContainer>
-          <GatsbyImage image={image} alt={item.node.Brand} />
-        </ImgContainer>
-        <Country>{item.node.Country}</Country>
-        <Description>{item.node.Category}</Description>
-      </GridItem>
-      // </Link>
+      <Link
+        key={item.node.slug}
+        to={`/portfolio/${item.node.slug}`}
+        style={{ color: "#333", textDecoration: "none" }}>
+        <GridItem>
+          <Title>{item.node.Brand}</Title>
+          <ImgContainer>
+            <GatsbyImage image={image} alt={item.node.Brand} />
+          </ImgContainer>
+          <Country>{item.node.Country}</Country>
+          <Description>{item.node.Style}</Description>
+        </GridItem>
+      </Link>
     );
   });
 
@@ -146,7 +148,7 @@ const Portfolio = () => {
             marginBottom: "60px",
             paddingTop: "40px",
           }}>
-          Portfolio
+          Our Portfolio
         </h1>
         <Grid>{renderedList}</Grid>
       </Container>
