@@ -18,7 +18,7 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 30;
   transform: ${({ open }) => (open ? "translateX(0px)" : "translateX(-100vw)")};
   animation: ${({ open }) =>
     open === null
@@ -46,9 +46,7 @@ const Background = styled.div`
   }
 `;
 
-const Navbar = styled.nav`
-  z-index: 15;
-`;
+const Navbar = styled.nav``;
 
 const ListItems = styled.ul`
   margin-top: 50px;
@@ -61,7 +59,7 @@ const ListItems = styled.ul`
 const Item = styled.li`
   text-decoration: none;
   color: #000;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   font-size: 2rem;
   &:hover {
     opacity: 0.6;

@@ -15,8 +15,7 @@ const Title = styled.h1`
 const IntroContainer = styled.div`
   margin: 50px auto;
   padding: 50px;
-  width: 80%;
-  /* transform: translate(-40px, 280px); */
+  width: 72%;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
@@ -51,7 +50,7 @@ const ImgContainer = styled.div`
 const Lcbo = styled.div`
   margin: 50px;
   padding: 50px;
-  min-height: 700px;
+  min-height: 600px;
 
   /* transform: translate(-40px, 280px); */
   font-size: 1rem;
@@ -75,7 +74,7 @@ const Lcbo = styled.div`
 const Saq = styled.div`
   margin: 50px;
   padding: 50px;
-  min-height: 700px;
+  min-height: 600px;
 
   font-size: 1rem;
   background: #fff;
@@ -87,9 +86,7 @@ const Saq = styled.div`
     text-align: start;
     margin-top: 70px;
   }
-  img {
-    margin-top: 20px;
-  }
+
   @media screen and (min-width: 620px) {
     min-width: 450px;
   }
@@ -100,7 +97,7 @@ const Saq = styled.div`
 
 const BottomText = styled.div`
   padding: 50px;
-  width: 80%;
+  width: 72%;
   margin: 30px auto 60px;
   font-size: 1rem;
   background: #fff;
@@ -171,7 +168,7 @@ const Sales = () => {
             data-sal-delay='0'
             data-sal-duration='800'
             data-sal-easing='ease'>
-            <h2>{onTitle}</h2>
+            <h2 style={{ paddingBottom: "40px" }}>{onTitle}</h2>
             <ImgContainer>
               <GatsbyImage
                 image={lcboImg}
@@ -186,7 +183,7 @@ const Sales = () => {
             data-sal-delay='0'
             data-sal-duration='800'
             data-sal-easing='ease'>
-            <h2>{qcTitle}</h2>
+            <h2 style={{ paddingBottom: "40px" }}>{qcTitle}</h2>
             <ImgContainer>
               <GatsbyImage
                 image={saqImg}

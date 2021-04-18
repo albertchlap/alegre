@@ -5,7 +5,12 @@ import { Link } from "gatsby";
 
 const Container = styled.div`
   height: 50vh;
+  width: 100%;
   position: relative;
+  @media screen and (max-width: 900px) {
+    height: 300px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -25,11 +30,19 @@ const ContentWrapper = styled.div`
   position: absolute;
   top: 50px;
   left: 100px;
+  @media screen and (max-width: 900px) {
+    text-align: center;
+    bottom: 30%;
+  }
+  @media screen and (max-width: 500px) {
+    top: 20%;
+    left: 8%;
+  }
 `;
 
 const Text = styled.h1`
   z-index: 2;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 2vw, 3rem);
   color: #fff;
 `;
 

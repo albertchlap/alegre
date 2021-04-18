@@ -51,7 +51,7 @@ const Input = styled.input`
   padding: 5px 10px;
   font-family: "Rubik", sans-serif;
   font-size: 0.9rem;
-  @media screen and (min-width: 413px) {
+  @media screen and (min-width: 500px) {
     width: 80%;
   }
 `;
@@ -61,7 +61,7 @@ const InputContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 87%;
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 500px) {
     flex-direction: column;
   }
 `;

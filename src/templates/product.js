@@ -15,6 +15,7 @@ const Title = styled.h1`
 
 const Description = styled.h3`
   text-align: center;
+  padding: 0 20px;
 `;
 
 const ContentWrapper = styled.div`

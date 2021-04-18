@@ -34,7 +34,7 @@ const GridItem = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 600px;
+  height: 650px;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
@@ -74,6 +74,7 @@ const Title = styled.h2`
   color: #333;
   text-decoration: none;
   text-align: center;
+  padding: 0 10px;
 `;
 
 const ImgContainer = styled.div`
@@ -88,7 +89,7 @@ const Country = styled.h4``;
 
 const Description = styled.p`
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px !important;
 `;
 
 const Portfolio = () => {

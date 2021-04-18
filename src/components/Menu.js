@@ -15,7 +15,7 @@ const Button = styled.div`
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 35;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -23,6 +23,7 @@ const Button = styled.div`
     position: relative;
     width: 40px;
     height: 4px;
+
     background: ${({ open }) => (open ? "#000" : "#333")};
     border-radius: 40px !important;
     transform: ${({ open }) => (open ? "rotate(135deg)" : "rotate(0)")};

@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Helmet } from "react-helmet";
 import MenuBackground from "./MenuBackground";
+import { myContext } from "./Provider";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -27,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     background: var(--background);
+    overflow-y: ${({ fixed }) => fixed && "hidden"}
   }
 
   p {
@@ -43,7 +45,9 @@ const Layout = ({ children }) => {
           href='https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital@0;1&family=Nunito&display=swap'
           rel='stylesheet'></link>
       </Helmet>
-      <GlobalStyle />
+      <myContext.Consumer>
+        {context => <GlobalStyle fixed={context.open} />}
+      </myContext.Consumer>
       <MenuBackground />
       <Header />
       {children}
