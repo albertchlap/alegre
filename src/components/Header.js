@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-import Logo from "../images/alegre-logo.svg";
+import Logo from "../assets/images/alegre-logo.svg";
 import Menu from "../components/Menu";
 import Headroom from "react-headroom";
 import "./Header.css";

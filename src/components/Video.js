@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import Cheers from "../assets/videos/cheers.mp4";
+
 const VideoWrapper = styled.div`
   height: 100%;
   width: 100%;
@@ -25,10 +27,7 @@ const Video = () => {
         muted
         loop
         autoPlay>
-        <source
-          src='https://res.cloudinary.com/dghcus14g/video/upload/v1618600742/cheers_7384aa8761.mp4'
-          type='video/mp4'
-        />
+        <source src={Cheers} type='video/mp4' />
       </video>
     </VideoWrapper>
   );

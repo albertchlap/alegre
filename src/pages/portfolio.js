@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -143,6 +144,10 @@ const Portfolio = () => {
 
   return (
     <Layout>
+      <SEO
+        title='Portfolio | Alegre Imports'
+        description='Alegre Imports Portfolio Page'
+      />
       <Container>
         <h1
           style={{

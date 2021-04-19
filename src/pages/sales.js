@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import ReactMarkdown from "react-markdown";
+import SEO from "../components/SEO";
 
 const Container = styled.div`
   padding: 50px 0;
@@ -158,6 +159,10 @@ const Sales = () => {
 
   return (
     <Layout>
+      <SEO
+        title='Sales | Alegre Imports'
+        description='Alegre Imports Sales Page'
+      />
       <Container>
         <Title>LCBO/SAQ</Title>
         <IntroContainer

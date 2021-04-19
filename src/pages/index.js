@@ -6,12 +6,17 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import Values from "../components/Values";
 import ViewProducts from "../components/ViewProducts";
+import SEO from "../components/SEO";
 
 const Container = styled.div``;
 
 const Index = () => {
   return (
     <Layout>
+      <SEO
+        title='Home | Alegre Imports'
+        description='Alegre Imports Home Page'
+      />
       <Container>
         <Hero />
         <About />

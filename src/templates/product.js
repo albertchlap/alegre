@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { myContext } from "../components/Provider";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const Container = styled.div`
   padding-bottom: 50px;
@@ -62,6 +63,10 @@ const Product = ({ data }) => {
     <myContext.Consumer>
       {context => (
         <Layout>
+          <SEO
+            title={`${data.strapiProducts.Brand} | Alegre Imports`}
+            description='Alegre Imports Product Page'
+          />
           <Container>
             <Title>{data.strapiProducts.Brand}</Title>
             <Description>{data.strapiProducts.Description}</Description>
