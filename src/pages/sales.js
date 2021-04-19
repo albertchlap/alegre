@@ -6,12 +6,11 @@ import Layout from "../components/Layout";
 import ReactMarkdown from "react-markdown";
 
 const Container = styled.div`
-  padding-bottom: 50px;
+  padding: 50px 0;
 `;
 
 const Title = styled.h1`
   text-align: center;
-  color: var(--secondary);
 `;
 
 const IntroContainer = styled.div`
@@ -50,7 +49,7 @@ const ImgContainer = styled.div`
 `;
 
 const Lcbo = styled.div`
-  margin: 50px;
+  margin: 50px 60px 30px;
   padding: 30px;
   min-height: 550px;
 
@@ -66,7 +65,7 @@ const Lcbo = styled.div`
     margin-top: 70px;
   }
   @media screen and (max-width: 1260px) {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
   }
 
   @media screen and (min-width: 620px) {
@@ -78,7 +77,7 @@ const Lcbo = styled.div`
 `;
 
 const Saq = styled.div`
-  margin: 20px 30px 30px;
+  margin: 50px 60px 30px;
   padding: 30px;
   min-height: 550px;
   font-size: 1rem;
@@ -87,6 +86,7 @@ const Saq = styled.div`
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   text-align: center;
+
   p {
     text-align: start;
     margin-top: 70px;
@@ -173,7 +173,9 @@ const Sales = () => {
             data-sal-delay='0'
             data-sal-duration='800'
             data-sal-easing='ease'>
-            <h2 style={{ paddingBottom: "40px" }}>{onTitle}</h2>
+            <h2 style={{ paddingBottom: "40px", color: "var(--secondary)" }}>
+              {onTitle}
+            </h2>
             <ImgContainer>
               <GatsbyImage
                 image={lcboImg}
@@ -188,7 +190,9 @@ const Sales = () => {
             data-sal-delay='0'
             data-sal-duration='800'
             data-sal-easing='ease'>
-            <h2 style={{ paddingBottom: "40px" }}>{qcTitle}</h2>
+            <h2 style={{ paddingBottom: "40px", color: "var(--secondary)" }}>
+              {qcTitle}
+            </h2>
             <ImgContainer>
               <GatsbyImage
                 image={saqImg}

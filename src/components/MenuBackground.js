@@ -58,7 +58,7 @@ const ListItems = styled.ul`
 
 const Item = styled.li`
   text-decoration: none;
-  color: #000;
+  color: var(--secondary);
   margin-bottom: 60px;
   font-size: 2rem;
   &:hover {

@@ -5,11 +5,23 @@ import styled from "styled-components";
 
 const Container = styled.div`
   min-height: 100vh;
-  background: #f0f0f0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  background: #fff;
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e2e2e2,
+    #c9d6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 `;
 
 const Title = styled.h1`
@@ -31,13 +43,12 @@ const TextOne = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   /* transform: translateX(50px); */
   margin-bottom: 40px;
-  background: #fff;
   font-size: 1.2rem;
   p {
     padding: 20px;
@@ -77,9 +88,7 @@ const About = () => {
     <Container id='about'>
       <TextWrapper>
         <Title>
-          <span style={{ color: "var(--secondary)", fontStyle: "italic" }}>
-            Alegre Imports
-          </span>{" "}
+          <span style={{ color: "var(--secondary)" }}>Alegre Imports</span>{" "}
           opens the door to Canada
         </Title>
         <TextOne

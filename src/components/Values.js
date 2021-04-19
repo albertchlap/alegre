@@ -29,21 +29,25 @@ const Box = styled.div`
 
 const Title = styled.h3`
   text-align: center;
+  color: var(--secondary);
 `;
 
 const StyledFlag = styled(FlagIcon)`
   margin: 0 auto;
   padding-top: 20px;
+  color: var(--secondary);
 `;
 
 const VisionIcon = styled(VisibilityIcon)`
   margin: 0 auto;
   padding-top: 20px;
+  color: var(--secondary);
 `;
 
 const ValueIcon = styled(StarIcon)`
   margin: 0 auto;
   padding-top: 20px;
+  color: var(--secondary);
 `;
 
 const Description = styled.p`
@@ -65,12 +69,17 @@ const Values = () => {
     }
   `);
 
+  let delay = 100;
+
   const values = data.allStrapiValues.edges.map((edge, i) => {
+    if (i > 0) {
+      delay += 400;
+    }
     return (
       <Box
         key={i}
         data-sal='fade'
-        data-sal-delay='200'
+        data-sal-delay={delay}
         data-sal-duration='1000'
         data-sal-easing='ease'>
         {i === 0 ? <StyledFlag /> : i === 1 ? <VisionIcon /> : <ValueIcon />}

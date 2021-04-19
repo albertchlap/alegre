@@ -58,7 +58,7 @@ const GridItem = styled.div`
     height: 100%;
     border-radius: 20px;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 128, 0.5);
     opacity: 0;
     transition: all 0.6s ease-in-out;
   }
@@ -149,7 +149,6 @@ const Portfolio = () => {
             textAlign: "center",
             marginBottom: "60px",
             paddingTop: "40px",
-            color: "var(--secondary)",
           }}>
           Our Portfolio
         </h1>

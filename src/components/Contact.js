@@ -14,6 +14,7 @@ const Container = styled.div`
 const ContactTitle = styled.h2`
   text-align: center;
   margin-top: 20px;
+  color: var(--secondary);
 `;
 
 const ContactForm = styled.form`
@@ -102,6 +103,7 @@ const Button = styled.button`
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
   box-shadow: 0 3px 0px 0px rgba(0, 0, 0, 0.4);
+
   &:active {
     transform: translateY(3px);
     box-shadow: none;

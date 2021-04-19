@@ -62,7 +62,6 @@ const Product = ({ data }) => {
     <myContext.Consumer>
       {context => (
         <Layout>
-          {console.log(context.width)}
           <Container>
             <Title>{data.strapiProducts.Brand}</Title>
             <Description>{data.strapiProducts.Description}</Description>

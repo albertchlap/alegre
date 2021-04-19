@@ -49,9 +49,9 @@ const Item = styled.li`
   margin-right: 35px;
   font-weight: bold;
   z-index: 20;
-  transition: opacity 0.5s ease;
+  transition: color 0.5s ease;
   &:hover {
-    opacity: 0.5;
+    color: var(--secondary);
   }
 `;
 

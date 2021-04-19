@@ -21,32 +21,43 @@ const ContentWrapper = styled.div`
   width: 700px;
   height: 300px;
   position: absolute;
-  top: 200px;
-  left: 170px;
+  top: 300px;
+  left: 100px;
   z-index: 5;
-  @media screen and (max-width: 768px) {
-    width: 400px;
-    left: 100px;
+  @media screen and (max-width: 1000px) {
+    top: 250px;
+    width: 500px;
+    height: 400px;
   }
-  @media screen and (max-width: 500px) {
-    top: 120px;
-    left: 70px;
+  @media screen and (max-width: 900px) {
+    top: 200px;
   }
 `;
 
 const HeroHeader = styled.h1`
   color: #fff;
-  font-size: clamp(2rem, 7vw, 5rem);
+  font-size: 4rem;
   z-index: 30;
+  @media screen and (max-width: 1200px) {
+    font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 710px) {
+    font-size: 2rem;
+  }
 `;
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiHeroImages {
+      allStrapiHeroImages(sort: { fields: [Position], order: ASC }) {
         edges {
           node {
             alt
+            Position
             Images {
               childImageSharp {
                 gatsbyImageData(
