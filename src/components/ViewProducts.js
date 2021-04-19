@@ -39,7 +39,13 @@ const ContentWrapper = styled.div`
   }
   @media screen and (max-width: 500px) {
     top: 20%;
-    left: -10%;
+    left: 12%;
+    width: 250px;
+  }
+  @media screen and (max-width: 360px) {
+    top: 20%;
+    left: 8%;
+    width: 250px;
   }
 `;
 
