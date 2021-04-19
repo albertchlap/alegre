@@ -42,18 +42,21 @@ const StyledFlag = styled(FlagIcon)`
   margin: 0 auto;
   padding-top: 20px;
   color: var(--secondary);
+  font-size: 3rem;
 `;
 
 const VisionIcon = styled(VisibilityIcon)`
   margin: 0 auto;
   padding-top: 20px;
   color: var(--secondary);
+  font-size: 3rem;
 `;
 
 const ValueIcon = styled(StarIcon)`
   margin: 0 auto;
   padding-top: 20px;
   color: var(--secondary);
+  font-size: 3rem;
 `;
 
 const Description = styled.p`
