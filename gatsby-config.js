@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "alegre",
+    title: "Alegre Imports",
+    description: "Alcohol Importing Agency in Canada",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -13,7 +14,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },
@@ -36,14 +37,27 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Alegre Imports`,
+        short_name: `Alegre Imports`,
+        start_url: `/`,
+        background_color: `#c9d6ff`,
+        theme_color: `#333`,
+        display: `standalone`,
+        icon: `src/assets/images/favicon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
 
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: "https://alegreimports.herokuapp.com",
-        // apiURL: process.env.DEPLOY_URL
-        //   ? "https://alegreimports.herokuapp.com"
-        //   : "http://localhost:1337",
+        // apiURL: "https://alegreimports.herokuapp.com",
+        apiURL: process.env.DEPLOY_URL
+          ? "https://alegreimports.herokuapp.com"
+          : "http://localhost:1337",
         queryLimit: 5000, // Default to 100
         contentTypes: [
           `hero-images`,
