@@ -9,6 +9,8 @@ const Container = styled.div`
   max-height: 400px;
   color: black;
   min-height: 250px;
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
@@ -25,6 +27,10 @@ const Box = styled.div`
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
+  @media screen and (max-width: 900px) {
+    margin: 0 auto;
+    width: 96%;
+  }
 `;
 
 const Title = styled.h3`

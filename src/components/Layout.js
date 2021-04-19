@@ -3,7 +3,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Helmet } from "react-helmet";
+import "@fontsource/montserrat";
 import MenuBackground from "./MenuBackground";
 import { myContext } from "./Provider";
 
@@ -14,6 +14,13 @@ const GlobalStyle = createGlobalStyle`
     --color: #333;
     --secondary: #000080;
     --background: #F0F0F0;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow-x: hidden;
   }
 
    body {
@@ -49,13 +56,6 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) => {
   return (
     <>
-      <Helmet>
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Montserrat&display=swap'
-          rel='stylesheet'
-        />
-      </Helmet>
       <myContext.Consumer>
         {context => <GlobalStyle fixed={context.open} />}
       </myContext.Consumer>

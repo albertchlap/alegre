@@ -32,11 +32,17 @@ const ContactForm = styled.form`
   background: #fff;
   margin-top: 60px;
   @media screen and (max-width: 900px) {
-    margin-top: 500px;
+    margin-top: 570px;
     width: 90%;
   }
   @media screen and (max-width: 400px) {
     margin-top: 600px;
+  }
+  @media screen and (max-width: 353px) {
+    margin-top: 670px;
+  }
+  @media screen and (max-width: 353px) {
+    margin-top: 700px;
   }
 `;
 

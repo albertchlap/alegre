@@ -33,10 +33,11 @@ const ContentWrapper = styled.div`
   @media screen and (max-width: 600px) {
     text-align: center;
     bottom: 30%;
+    left: 7%;
   }
   @media screen and (max-width: 500px) {
     top: 20%;
-    left: 8%;
+    left: 0%;
   }
 `;
 

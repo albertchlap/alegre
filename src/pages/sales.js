@@ -52,7 +52,7 @@ const ImgContainer = styled.div`
 const Lcbo = styled.div`
   margin: 50px 60px 30px;
   padding: 30px;
-  min-height: 550px;
+  min-height: 650px;
 
   /* transform: translate(-40px, 280px); */
   font-size: 1rem;
@@ -80,7 +80,7 @@ const Lcbo = styled.div`
 const Saq = styled.div`
   margin: 50px 60px 30px;
   padding: 30px;
-  min-height: 550px;
+  min-height: 650px;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
