@@ -57,7 +57,7 @@ const Item = styled.li`
 
 const Header = () => {
   return (
-    <Headroom pinstart={90} disableInlineStyles>
+    <Headroom disableInlineStyles>
       <Container>
         <Menu />
         <LogoWrapper>

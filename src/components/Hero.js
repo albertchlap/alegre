@@ -21,7 +21,7 @@ const ContentWrapper = styled.div`
   width: 700px;
   height: 300px;
   position: absolute;
-  top: 160px;
+  top: 200px;
   left: 170px;
   z-index: 5;
   @media screen and (max-width: 768px) {

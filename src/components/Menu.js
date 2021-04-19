@@ -7,8 +7,8 @@ const Button = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 10px !important;
+  right: 10px !important;
   width: 60px;
   height: 60px;
   background: none;

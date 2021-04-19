@@ -24,6 +24,7 @@ const Provider = props => {
     <myContext.Provider
       value={{
         open,
+        width,
         setValue: val => setOpen(val),
         toggleValue: () => setOpen(!open),
       }}>

@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import ReactMarkdown from "react-markdown";
 
 const Container = styled.div`
   padding-bottom: 50px;
@@ -10,20 +11,21 @@ const Container = styled.div`
 
 const Title = styled.h1`
   text-align: center;
+  color: var(--secondary);
 `;
 
 const IntroContainer = styled.div`
-  margin: 50px auto;
-  padding: 50px;
+  margin: 50px auto 0;
+  padding: 30px;
   width: 72%;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   @media screen and (max-width: 619px) {
-    width: 60%;
+    width: 64%;
   }
 `;
 
@@ -33,7 +35,7 @@ const CardsContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 80%;
-  margin: 0 auto;
+  margin: -50px auto 0;
   @media screen and (max-width: 1260px) {
     flex-direction: column;
     width: 80%;
@@ -49,8 +51,8 @@ const ImgContainer = styled.div`
 
 const Lcbo = styled.div`
   margin: 50px;
-  padding: 50px;
-  min-height: 600px;
+  padding: 30px;
+  min-height: 550px;
 
   /* transform: translate(-40px, 280px); */
   font-size: 1rem;
@@ -63,6 +65,10 @@ const Lcbo = styled.div`
     text-align: start;
     margin-top: 70px;
   }
+  @media screen and (max-width: 1260px) {
+    margin-bottom: 20px;
+  }
+
   @media screen and (min-width: 620px) {
     min-width: 450px;
   }
@@ -72,10 +78,9 @@ const Lcbo = styled.div`
 `;
 
 const Saq = styled.div`
-  margin: 50px;
-  padding: 50px;
-  min-height: 600px;
-
+  margin: 20px 30px 30px;
+  padding: 30px;
+  min-height: 550px;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
@@ -96,16 +101,16 @@ const Saq = styled.div`
 `;
 
 const BottomText = styled.div`
-  padding: 50px;
+  padding: 30px;
   width: 72%;
-  margin: 30px auto 60px;
+  margin: 0 auto 60px;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   @media screen and (max-width: 619px) {
-    width: 60%;
+    width: 64%;
   }
 `;
 
@@ -156,11 +161,11 @@ const Sales = () => {
       <Container>
         <Title>LCBO/SAQ</Title>
         <IntroContainer
-          data-sal='fade'
+          data-sal='slide-right'
           data-sal-delay='300'
           data-sal-duration='800'
           data-sal-easing='ease'>
-          <p>{introText}</p>
+          <ReactMarkdown children={introText} />
         </IntroContainer>
         <CardsContainer>
           <Lcbo
@@ -176,7 +181,7 @@ const Sales = () => {
                 imgStyle={{ borderRadius: "10px" }}
               />
             </ImgContainer>
-            <p>{ontario}</p>
+            <ReactMarkdown children={ontario} />
           </Lcbo>
           <Saq
             data-sal='slide-left'
@@ -195,11 +200,11 @@ const Sales = () => {
           </Saq>
         </CardsContainer>
         <BottomText
-          data-sal='fade'
+          data-sal='slide-left'
           data-sal-delay='300'
           data-sal-duration='800'
           data-sal-easing='ease'>
-          <p>{conclusion}</p>
+          <ReactMarkdown children={conclusion} />
         </BottomText>
       </Container>
     </Layout>

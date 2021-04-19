@@ -14,8 +14,9 @@ const Container = styled.div`
 
 const Title = styled.h1`
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 20px;
+  transform: translateY(-20px);
 `;
 
 const TextWrapper = styled.div`
@@ -75,7 +76,12 @@ const About = () => {
   return (
     <Container id='about'>
       <TextWrapper>
-        <Title>Alegre Imports opens the door to Canada</Title>
+        <Title>
+          <span style={{ color: "var(--secondary)", fontStyle: "italic" }}>
+            Alegre Imports
+          </span>{" "}
+          opens the door to Canada
+        </Title>
         <TextOne
           data-sal='slide-right'
           data-sal-delay='300'
@@ -85,7 +91,7 @@ const About = () => {
         </TextOne>
         <TextTwo
           data-sal='slide-left'
-          data-sal-delay='900'
+          data-sal-delay='600'
           data-sal-duration='800'
           data-sal-easing='ease'>
           <p>{data.allStrapiAbouts.edges[1].node.Text}</p>

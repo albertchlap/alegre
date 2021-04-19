@@ -11,10 +11,10 @@ const Background = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  background: #fff;
+  background: var(--background);
   height: 100vh;
   width: 100vw;
-  opacity: 0.9;
+  opacity: 0.95;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -30,7 +30,7 @@ const ContentWrapper = styled.div`
   position: absolute;
   top: 50px;
   left: 100px;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 600px) {
     text-align: center;
     bottom: 30%;
   }
@@ -42,7 +42,7 @@ const ContentWrapper = styled.div`
 
 const Text = styled.h1`
   z-index: 2;
-  font-size: clamp(1.8rem, 2vw, 3rem);
+  font-size: clamp(2rem, 3vw, 4rem);
   color: #fff;
 `;
 
@@ -67,7 +67,7 @@ const ViewProducts = () => {
     <Container>
       <Video />
       <ContentWrapper>
-        <Text>Brands we Represent</Text>
+        <Text>Brands We Represent</Text>
         <Link to='/portfolio'>
           <Button primary>Our Portfolio</Button>
         </Link>

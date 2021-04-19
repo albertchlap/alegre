@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
+import { myContext } from "../components/Provider";
 import Layout from "../components/Layout";
 
 const Container = styled.div`
@@ -30,6 +30,10 @@ const ContentWrapper = styled.div`
   @media screen and (max-width: 960px) {
     flex-direction: column;
   }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    font-size: 0.9rem;
+  }
 `;
 
 const Box = styled.div`
@@ -42,7 +46,7 @@ const Box = styled.div`
 `;
 
 const ListItems = styled.ul`
-  padding-right: 30px;
+  padding: 0 30px;
   list-style: none;
 `;
 
@@ -55,49 +59,54 @@ const Product = ({ data }) => {
   const image = getImage(data.strapiProducts.image);
 
   return (
-    <Layout>
-      <Container>
-        <Title>{data.strapiProducts.Brand}</Title>
-        <Description>{data.strapiProducts.Description}</Description>
-        <ContentWrapper
-          data-sal='slide-left'
-          data-sal-delay='300'
-          data-sal-duration='800'
-          data-sal-easing='ease'>
-          <Box style={{ padding: "50px 0" }}>
-            <GatsbyImage image={image} alt={data.strapiProducts.Brand} />
-          </Box>
-          <Box>
-            <ListItems>
-              <Item>{`Category: ${data.strapiProducts.Category}`}</Item>
-              <Item>{`Country: ${data.strapiProducts.Country}`}</Item>
-              <Item>{`Style: ${data.strapiProducts.Style}`}</Item>
-              <Item>{`Volume: ${data.strapiProducts.Volume}`}</Item>
-              <Item>{`ABV: ${data.strapiProducts.ABV}`}</Item>
-              <Item>{`Producer: ${data.strapiProducts.Producer}`}</Item>
-              {data.strapiProducts.Supplier && (
-                <Item>{`Supplier: ${data.strapiProducts.Supplier}`}</Item>
-              )}
-              {data.strapiProducts.Designations && (
-                <Item>{`Designations: ${data.strapiProducts.Designations}`}</Item>
-              )}
-              {data.strapiProducts.Other && (
-                <Item>{`Other: ${data.strapiProducts.Other}`}</Item>
-              )}
-              <Item>
-                Website:{" "}
-                <a
-                  href={data.strapiProducts.url}
-                  target='_blank'
-                  rel='noreferrer'>
-                  {data.strapiProducts.url}
-                </a>
-              </Item>
-            </ListItems>
-          </Box>
-        </ContentWrapper>
-      </Container>
-    </Layout>
+    <myContext.Consumer>
+      {context => (
+        <Layout>
+          {console.log(context.width)}
+          <Container>
+            <Title>{data.strapiProducts.Brand}</Title>
+            <Description>{data.strapiProducts.Description}</Description>
+            <ContentWrapper
+              data-sal={context.width > 960 ? "slide-left" : ""}
+              data-sal-delay='300'
+              data-sal-duration='800'
+              data-sal-easing='ease'>
+              <Box style={{ padding: "50px 0" }}>
+                <GatsbyImage image={image} alt={data.strapiProducts.Brand} />
+              </Box>
+              <Box>
+                <ListItems>
+                  <Item>{`Category: ${data.strapiProducts.Category}`}</Item>
+                  <Item>{`Country: ${data.strapiProducts.Country}`}</Item>
+                  <Item>{`Style: ${data.strapiProducts.Style}`}</Item>
+                  <Item>{`Volume: ${data.strapiProducts.Volume}`}</Item>
+                  <Item>{`ABV: ${data.strapiProducts.ABV}`}</Item>
+                  <Item>{`Producer: ${data.strapiProducts.Producer}`}</Item>
+                  {data.strapiProducts.Supplier && (
+                    <Item>{`Supplier: ${data.strapiProducts.Supplier}`}</Item>
+                  )}
+                  {data.strapiProducts.Designations && (
+                    <Item>{`Designations: ${data.strapiProducts.Designations}`}</Item>
+                  )}
+                  {data.strapiProducts.Other && (
+                    <Item>{`Other: ${data.strapiProducts.Other}`}</Item>
+                  )}
+                  <Item>
+                    Website:{" "}
+                    <a
+                      href={data.strapiProducts.url}
+                      target='_blank'
+                      rel='noreferrer'>
+                      {data.strapiProducts.url}
+                    </a>
+                  </Item>
+                </ListItems>
+              </Box>
+            </ContentWrapper>
+          </Container>
+        </Layout>
+      )}
+    </myContext.Consumer>
   );
 };
 

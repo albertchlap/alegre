@@ -85,9 +85,9 @@ const ImgContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-const Country = styled.h4``;
+const Description = styled.h4``;
 
-const Description = styled.p`
+const Country = styled.p`
   text-align: center;
   padding-bottom: 20px !important;
 `;
@@ -95,12 +95,13 @@ const Description = styled.p`
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiProducts {
+      allStrapiProducts(sort: { fields: [Position], order: ASC }) {
         edges {
           node {
             Brand
             Country
             Category
+            Position
             slug
             strapiId
             Style
@@ -133,8 +134,8 @@ const Portfolio = () => {
           <ImgContainer>
             <GatsbyImage image={image} alt={item.node.Brand} />
           </ImgContainer>
-          <Country>{item.node.Country}</Country>
           <Description>{item.node.Style}</Description>
+          <Country>{item.node.Country}</Country>
         </GridItem>
       </Link>
     );
@@ -148,6 +149,7 @@ const Portfolio = () => {
             textAlign: "center",
             marginBottom: "60px",
             paddingTop: "40px",
+            color: "var(--secondary)",
           }}>
           Our Portfolio
         </h1>

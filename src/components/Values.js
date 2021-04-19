@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import FlagIcon from "@material-ui/icons/Flag";
 import VisibilityIcon from "@material-ui/icons/Visibility";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import StarIcon from "@material-ui/icons/Star";
 import { useStaticQuery, graphql } from "gatsby";
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 100px 20px 20px 20px;
+  padding: 60px 20px 20px 10px;
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
   }
@@ -41,7 +41,7 @@ const VisionIcon = styled(VisibilityIcon)`
   padding-top: 20px;
 `;
 
-const ValueIcon = styled(AttachMoneyIcon)`
+const ValueIcon = styled(StarIcon)`
   margin: 0 auto;
   padding-top: 20px;
 `;
@@ -65,18 +65,12 @@ const Values = () => {
     }
   `);
 
-  let delay = 100;
-
   const values = data.allStrapiValues.edges.map((edge, i) => {
-    if (i !== 0) {
-      delay += 300;
-    }
-
     return (
       <Box
         key={i}
-        data-sal='flip-up'
-        data-sal-delay={delay}
+        data-sal='fade'
+        data-sal-delay='200'
         data-sal-duration='1000'
         data-sal-easing='ease'>
         {i === 0 ? <StyledFlag /> : i === 1 ? <VisionIcon /> : <ValueIcon />}
