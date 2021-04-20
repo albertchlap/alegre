@@ -61,6 +61,7 @@ module.exports = {
         queryLimit: 5000, // Default to 100
         contentTypes: [
           `hero-images`,
+          `main-titles`,
           `products`,
           `abouts`,
           `sales`,
