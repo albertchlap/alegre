@@ -6,10 +6,8 @@ import Cheers from "../assets/videos/cheers.mp4";
 const VideoWrapper = styled.div`
   height: 100%;
   width: 100%;
-
   overflow: hidden;
-
- 
+`;
 
 const Video = () => {
   return (
