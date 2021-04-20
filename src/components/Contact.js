@@ -125,8 +125,9 @@ const Contact = () => {
         data-sal-duration='800'
         data-sal-easing='ease'
         id='contact'
-        method='POST'
+        method='post'
         data-netlify='true'>
+        <input type='hidden' name='form-name' value='contact' />
         <ContactTitle>Get in Touch</ContactTitle>
         <InputContainer>
           <HalfInput>
@@ -164,9 +165,7 @@ const Contact = () => {
           cols='40'
           placeholder='Write Your Message...'
         />
-        <Button type='submit' onClick={e => e.preventDefault()}>
-          Submit
-        </Button>
+        <Button type='submit'>Submit</Button>
       </ContactForm>
     </Container>
   );
