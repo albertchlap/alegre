@@ -91,7 +91,13 @@ const Values = () => {
         data-sal-delay={delay}
         data-sal-duration='1000'
         data-sal-easing='ease'>
-        {i === 0 ? <StyledFlag /> : i === 1 ? <VisionIcon /> : <ValueIcon />}
+        {edge.node.Title === "Mission" ? (
+          <StyledFlag />
+        ) : edge.node.Title === "Vision" ? (
+          <VisionIcon />
+        ) : (
+          <ValueIcon />
+        )}
         <Title>{edge.node.Title}</Title>
         <Description>{edge.node.Text}</Description>
       </Box>

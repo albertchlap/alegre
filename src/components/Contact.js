@@ -164,7 +164,9 @@ const Contact = () => {
           cols='40'
           placeholder='Write Your Message...'
         />
-        <Button type='submit'>Submit</Button>
+        <Button type='submit' onClick={e => e.preventDefault()}>
+          Submit
+        </Button>
       </ContactForm>
     </Container>
   );
