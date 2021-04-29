@@ -25,6 +25,9 @@ const ContentContainer = styled.div`
   @media screen and (max-width: 1299px) {
     width: 90%;
   }
+  @media screen and (min-width: 1550px) {
+    width: 70%;
+  }
 `;
 
 const Title = styled.h1`

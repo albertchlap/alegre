@@ -53,7 +53,7 @@ const TextOne = styled.div`
   margin-bottom: 40px;
   font-size: 1.2rem;
   p {
-    padding: 20px;
+    padding: 10px;
     color: var(--textColor);
   }
 `;
