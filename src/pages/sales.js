@@ -7,25 +7,40 @@ import ReactMarkdown from "react-markdown";
 import SEO from "../components/SEO";
 
 const Container = styled.div`
-  padding: 50px 0;
+  padding: 50px 0 200px;
+  @media screen and (max-width: 945px) {
+    padding-bottom: 300px;
+  }
+  @media screen and (max-width: 362px) {
+    padding-bottom: 350px;
+  }
+`;
+
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 `;
 
 const Title = styled.h1`
   text-align: center;
+  color: var(--textColor);
 `;
 
 const IntroContainer = styled.div`
   margin: 50px auto 0;
   padding: 30px;
-  width: 72%;
+
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   margin-bottom: 30px;
+  color: var(--textColor);
   @media screen and (max-width: 619px) {
-    width: 64%;
+    width: 90%;
   }
 `;
 
@@ -34,11 +49,11 @@ const CardsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: -50px auto 0;
   @media screen and (max-width: 1260px) {
     flex-direction: column;
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -53,13 +68,13 @@ const Lcbo = styled.div`
   margin: 50px 60px 30px;
   padding: 30px;
   min-height: 650px;
-
+  color: var(--textColor);
   /* transform: translate(-40px, 280px); */
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   text-align: center;
   p {
     text-align: start;
@@ -73,7 +88,6 @@ const Lcbo = styled.div`
     min-width: 450px;
   }
   @media screen and (max-width: 619px) {
-    width: 80%;
   }
 `;
 
@@ -87,6 +101,7 @@ const Saq = styled.div`
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   text-align: center;
+  color: var(--textColor);
 
   p {
     text-align: start;
@@ -97,21 +112,22 @@ const Saq = styled.div`
     min-width: 450px;
   }
   @media screen and (max-width: 619px) {
-    width: 80%;
+   ]
   }
 `;
 
 const BottomText = styled.div`
   padding: 30px;
-  width: 72%;
+
   margin: 0 auto 60px;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
+  color: var(--textColor);
   @media screen and (max-width: 619px) {
-    width: 64%;
+    width: 94%;
   }
 `;
 
@@ -165,56 +181,58 @@ const Sales = () => {
       />
       <Container>
         <Title>LCBO/SAQ</Title>
-        <IntroContainer
-          data-sal='slide-right'
-          data-sal-delay='300'
-          data-sal-duration='800'
-          data-sal-easing='ease'>
-          <ReactMarkdown children={introText} />
-        </IntroContainer>
-        <CardsContainer>
-          <Lcbo
+        <ContentContainer>
+          <IntroContainer
             data-sal='slide-right'
-            data-sal-delay='0'
+            data-sal-delay='300'
             data-sal-duration='800'
             data-sal-easing='ease'>
-            <h2 style={{ paddingBottom: "40px", color: "var(--secondary)" }}>
-              {onTitle}
-            </h2>
-            <ImgContainer>
-              <GatsbyImage
-                image={lcboImg}
-                alt='LCBO'
-                imgStyle={{ borderRadius: "10px" }}
-              />
-            </ImgContainer>
-            <ReactMarkdown children={ontario} />
-          </Lcbo>
-          <Saq
+            <ReactMarkdown children={introText} />
+          </IntroContainer>
+          <CardsContainer>
+            <Lcbo
+              data-sal='slide-right'
+              data-sal-delay='0'
+              data-sal-duration='800'
+              data-sal-easing='ease'>
+              <h2 style={{ paddingBottom: "40px", color: "var(--textColor)" }}>
+                {onTitle}
+              </h2>
+              <ImgContainer>
+                <GatsbyImage
+                  image={lcboImg}
+                  alt='LCBO'
+                  imgStyle={{ borderRadius: "10px" }}
+                />
+              </ImgContainer>
+              <ReactMarkdown children={ontario} />
+            </Lcbo>
+            <Saq
+              data-sal='slide-left'
+              data-sal-delay='0'
+              data-sal-duration='800'
+              data-sal-easing='ease'>
+              <h2 style={{ paddingBottom: "40px", color: "var(--textColor)" }}>
+                {qcTitle}
+              </h2>
+              <ImgContainer>
+                <GatsbyImage
+                  image={saqImg}
+                  alt='SAQ'
+                  imgStyle={{ borderRadius: "10px" }}
+                />
+              </ImgContainer>
+              <p>{quebec}</p>
+            </Saq>
+          </CardsContainer>
+          <BottomText
             data-sal='slide-left'
-            data-sal-delay='0'
+            data-sal-delay='300'
             data-sal-duration='800'
             data-sal-easing='ease'>
-            <h2 style={{ paddingBottom: "40px", color: "var(--secondary)" }}>
-              {qcTitle}
-            </h2>
-            <ImgContainer>
-              <GatsbyImage
-                image={saqImg}
-                alt='SAQ'
-                imgStyle={{ borderRadius: "10px" }}
-              />
-            </ImgContainer>
-            <p>{quebec}</p>
-          </Saq>
-        </CardsContainer>
-        <BottomText
-          data-sal='slide-left'
-          data-sal-delay='300'
-          data-sal-duration='800'
-          data-sal-easing='ease'>
-          <ReactMarkdown children={conclusion} />
-        </BottomText>
+            <ReactMarkdown children={conclusion} />
+          </BottomText>
+        </ContentContainer>
       </Container>
     </Layout>
   );

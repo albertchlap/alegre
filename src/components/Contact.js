@@ -8,13 +8,19 @@ const Container = styled.div`
   justify-content: start;
   align-items: center;
   overflow: hidden;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
+  @media screen and (max-width: 945px) {
+    padding-bottom: 300px;
+  }
+  @media screen and (max-width: 362px) {
+    padding-bottom: 350px;
+  }
 `;
 
 const ContactTitle = styled.h2`
   text-align: center;
   margin-top: 20px;
-  color: var(--secondary);
+  color: var(--textColor);
 `;
 
 const ContactForm = styled.form`
@@ -27,32 +33,41 @@ const ContactForm = styled.form`
   min-height: 600px;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   margin-bottom: 30px;
   background: #fff;
+
   margin-top: 60px;
   @media screen and (max-width: 900px) {
     margin-top: 570px;
     width: 90%;
   }
-  @media screen and (max-width: 400px) {
-    margin-top: 600px;
-  }
-  @media screen and (max-width: 353px) {
-    margin-top: 670px;
-  }
-  @media screen and (max-width: 353px) {
+  @media screen and (max-width: 493px) {
     margin-top: 700px;
+  }
+  @media screen and (max-width: 400px) {
+    margin-top: 750px;
+  }
+  @media screen and (max-width: 350px) {
+    margin-top: 850px;
+  }
+  @media screen and (max-width: 322px) {
+    margin-top: 900px;
+  }
+  @media screen and (max-width: 300px) {
+    margin-top: 1000px;
   }
 `;
 
 const Label = styled.label`
   padding: 10px;
+  color: var(--textColor);
 `;
 
 const Input = styled.input`
   margin-bottom: 8px;
   border-radius: 10px;
+  background-color: #f8f8f8;
   border: 1px solid #333;
   outline: none;
   padding: 5px 10px;
@@ -161,7 +176,7 @@ const Contact = () => {
         </InputContainer>
         <Text
           name='body'
-          rows='15'
+          rows='10'
           cols='40'
           placeholder='Write Your Message...'
         />

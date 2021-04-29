@@ -23,10 +23,11 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 260px;
-  background: #fff;
+  background: #f8f8f8;
+
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   @media screen and (max-width: 900px) {
     margin: 0 auto;
     width: 96%;
@@ -35,33 +36,35 @@ const Box = styled.div`
 
 const Title = styled.h3`
   text-align: center;
-  color: var(--secondary);
+  color: var(--textColor);
+  font-size: 1.5rem;
 `;
 
 const StyledFlag = styled(FlagIcon)`
   margin: 0 auto;
   padding-top: 20px;
-  color: var(--secondary);
+  color: var(--textColor);
   font-size: 3rem;
 `;
 
 const VisionIcon = styled(VisibilityIcon)`
   margin: 0 auto;
   padding-top: 20px;
-  color: var(--secondary);
+  color: var(--textColor);
   font-size: 3rem;
 `;
 
 const ValueIcon = styled(StarIcon)`
   margin: 0 auto;
   padding-top: 20px;
-  color: var(--secondary);
+  color: var(--textColor);
   font-size: 3rem;
 `;
 
 const Description = styled.p`
   font-size: 1rem;
   padding: 0 20px;
+  color: var(--textColor);
 `;
 
 const Values = () => {

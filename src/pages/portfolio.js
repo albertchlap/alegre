@@ -9,7 +9,13 @@ import SEO from "../components/SEO";
 
 const Container = styled.div`
   min-height: 100vh;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
+  @media screen and (max-width: 945px) {
+    padding-bottom: 300px;
+  }
+  @media screen and (max-width: 362px) {
+    padding-bottom: 350px;
+  }
 `;
 
 const Grid = styled.div`
@@ -38,7 +44,7 @@ const GridItem = styled.div`
   height: 650px;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   cursor: pointer;
   position: relative;
   transition: all 0.6s ease-in-out;
@@ -57,9 +63,9 @@ const GridItem = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: var(--radius);
     z-index: 2;
-    background: rgba(0, 0, 128, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: all 0.6s ease-in-out;
   }
@@ -72,10 +78,10 @@ const GridItem = styled.div`
 `;
 const Title = styled.h2`
   margin-bottom: 60px;
-  color: #333;
   text-decoration: none;
   text-align: center;
   padding: 0 10px;
+  color: var(--textColor);
 `;
 
 const ImgContainer = styled.div`
@@ -86,11 +92,14 @@ const ImgContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-const Description = styled.h4``;
+const Description = styled.h4`
+  color: var(--textColor);
+`;
 
 const Country = styled.p`
   text-align: center;
   padding-bottom: 20px !important;
+  color: var(--textColor);
 `;
 
 const Portfolio = () => {
@@ -154,6 +163,7 @@ const Portfolio = () => {
             textAlign: "center",
             marginBottom: "60px",
             paddingTop: "40px",
+            color: "var(--textColor)",
           }}>
           Our Portfolio
         </h1>

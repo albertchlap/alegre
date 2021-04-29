@@ -44,14 +44,14 @@ const ListItems = styled.ul`
 `;
 
 const Item = styled.li`
-  color: var(--color);
+  color: var(--textColor);
   text-decoration: none;
   margin-right: 35px;
   font-weight: bold;
   z-index: 20;
-  transition: color 0.5s ease;
+  transition: opacity 0.5s ease;
   &:hover {
-    color: var(--secondary);
+    opacity: 0.7;
   }
 `;
 

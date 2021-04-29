@@ -4,7 +4,7 @@ import Video from "./Video";
 import { Link } from "gatsby";
 
 const Container = styled.div`
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   position: relative;
   @media screen and (max-width: 900px) {
@@ -28,7 +28,7 @@ const Container = styled.div`
 const ContentWrapper = styled.div`
   z-index: 2;
   position: absolute;
-  top: 50px;
+  top: 150px;
   left: 100px;
   font-size: 2rem;
   padding-left: 20px;

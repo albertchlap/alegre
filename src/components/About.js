@@ -10,25 +10,20 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 100;
-  background: #fff;
-  background: #c9d6ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e2e2e2,
-    #c9d6ff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e2e2e2,
-    #c9d6ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: var(--logoColor);
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 `;
 
 const Title = styled.h1`
   text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
   padding-top: 30px;
   padding-bottom: 20px;
   transform: translateY(-20px);
+  color: var(--textColor);
 `;
 
 const TextWrapper = styled.div`
@@ -41,17 +36,20 @@ const TextWrapper = styled.div`
 
 const TextOne = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #fff;
+  padding: 5px 10px;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   /* transform: translateX(50px); */
   margin-bottom: 40px;
   font-size: 1.2rem;
   p {
     padding: 20px;
+    color: var(--textColor);
   }
 `;
 
@@ -64,11 +62,10 @@ const TextTwo = styled.div`
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   margin-bottom: 60px;
   font-size: 1.2rem;
   p {
-    padding: 20px;
   }
 `;
 
@@ -87,24 +84,18 @@ const About = () => {
   return (
     <Container id='about'>
       <TextWrapper>
-        <Title>
-          <span style={{ color: "var(--secondary)" }}>Alegre Imports</span>{" "}
-          opens the door to Canada
-        </Title>
+        <Title>Alegre Imports opens the door for you</Title>
         <TextOne
           data-sal='slide-right'
           data-sal-delay='300'
           data-sal-duration='800'
           data-sal-easing='ease'>
           <p>{data.allStrapiAbouts.edges[0].node.Text}</p>
+
+          <p style={{ marginTop: "-10px" }}>
+            {data.allStrapiAbouts.edges[1].node.Text}
+          </p>
         </TextOne>
-        <TextTwo
-          data-sal='slide-left'
-          data-sal-delay='600'
-          data-sal-duration='800'
-          data-sal-easing='ease'>
-          <p>{data.allStrapiAbouts.edges[1].node.Text}</p>
-        </TextTwo>
       </TextWrapper>
     </Container>
   );

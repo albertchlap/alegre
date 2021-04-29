@@ -13,7 +13,11 @@ const GlobalStyle = createGlobalStyle`
     0 14px 19px 0 rgba(0, 0, 0, 0.02);
     --color: #333;
     --secondary: #000080;
-    --background: #F0F0F0;
+    --background: #f0f0f0;
+    --radius: 10px;
+    --boxColor: #D0D0D0;
+    --logoColor: #fee5b1;
+    --textColor: #08376B;
   }
   * {
     box-sizing: border-box;
@@ -30,25 +34,23 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    color: var(--color);
+    color: var(--textColor);
     width: 100%;
     height: 100%;
-    background: #c9d6ff; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #e2e2e2,
-      #c9d6ff
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #e2e2e2,
-      #c9d6ff
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    overflow-y: ${({ fixed }) => fixed && "hidden"}
+    background-color: var(--logoColor);
+background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    
+   
   }
 
   h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1.8px;
+  }
+  p {
+    line-height: 1.5;
   }
 
 `;

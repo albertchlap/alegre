@@ -7,23 +7,31 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 const Container = styled.div`
-  padding-bottom: 50px;
+  padding-bottom: 200px;
+  @media screen and (max-width: 945px) {
+    padding-bottom: 300px;
+  }
+  @media screen and (max-width: 362px) {
+    padding-bottom: 350px;
+  }
 `;
 
 const Title = styled.h1`
   text-align: center;
+  color: var(--textColor);
 `;
 
 const Description = styled.h3`
   text-align: center;
   padding: 0 20px;
+  color: var(--textColor);
 `;
 
 const ContentWrapper = styled.div`
   margin: 50px auto;
   width: 80%;
   box-shadow: var(--shadow);
-  border-radius: 20px;
+  border-radius: var(--radius);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +62,7 @@ const ListItems = styled.ul`
 const Item = styled.li`
   padding: 20px;
   font-weight: bold;
+  color: var(--textColor);
 `;
 
 const Product = ({ data }) => {
