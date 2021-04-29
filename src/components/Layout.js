@@ -37,8 +37,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--textColor);
     width: 100%;
     height: 100%;
-    background-color: var(--logoColor);
-background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+    background: var(--logoColor);
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */

@@ -25,6 +25,8 @@ const InfoContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 60%;
+    margin: 0 auto;
+    transform: translateX(22%);
   }
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -32,13 +34,23 @@ const InfoContainer = styled.div`
   @media screen and (max-width: 606px) {
     width: 95%;
   }
+  @media screen and (max-width: 525px) {
+    transform: translateX(15%);
+  }
+  @media screen and (max-width: 420px) {
+    transform: translateX(7%);
+  }
+  @media screen and (max-width: 420px) {
+    transform: translateX(0);
+  }
 `;
 
 const AddressContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 70px;
-  @media screen and (max-width: 466px) {
+  @media screen and (max-width: 511px) {
+    margin-right: 0;
   }
 `;
 
@@ -50,12 +62,16 @@ const Address = styled.p`
   font-weight: bold;
   color: var(--textColor);
   margin-left: 15px;
+  font-size: 0.8rem;
 `;
 
 const EmailContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 70px;
+  @media screen and (max-width: 511px) {
+    margin-right: 0;
+  }
 `;
 
 const Envelope = styled(EmailIcon)`
@@ -66,11 +82,15 @@ const EmailAddress = styled.p`
   font-weight: bold;
   color: var(--textColor);
   margin-left: 15px;
+  font-size: 0.8rem;
 `;
 
 const PhoneContainer = styled.div`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 511px) {
+    margin-right: 0;
+  }
 `;
 
 const Phone = styled(PhoneIcon)`
@@ -81,11 +101,13 @@ const PhoneNumber = styled.p`
   font-weight: bold;
   color: var(--textColor);
   margin-left: 15px;
+  font-size: 0.8rem;
 `;
 
 const FooterText = styled.p`
   color: var(--textColor);
   font-weight: bold;
+  font-size: 0.8rem;
 `;
 
 const year = new Date().getFullYear();
@@ -96,7 +118,7 @@ const Footer = () => {
       <InfoContainer>
         <AddressContainer>
           <LocationIcon />
-          <Address>63 Armadale Ave, Toronto, Ontario, Canada</Address>
+          <Address>63 Armadale Ave, Toronto, ON, Canada</Address>
         </AddressContainer>
         <EmailContainer>
           <Envelope />

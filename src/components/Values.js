@@ -14,7 +14,7 @@ const Container = styled.div`
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 60px 20px 20px 10px;
+  padding: 60px 20px 20px;
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
   }
@@ -24,13 +24,12 @@ const Box = styled.div`
   flex-direction: column;
   min-height: 260px;
   background: #f8f8f8;
-
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: var(--radius);
   @media screen and (max-width: 900px) {
+    width: 100%;
     margin: 0 auto;
-    width: 96%;
   }
 `;
 

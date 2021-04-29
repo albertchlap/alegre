@@ -7,9 +7,6 @@ const Container = styled.div`
   height: 70vh;
   width: 100%;
   position: relative;
-  @media screen and (max-width: 900px) {
-    height: 300px;
-  }
 
   &:before {
     content: "";
@@ -27,32 +24,23 @@ const Container = styled.div`
 
 const ContentWrapper = styled.div`
   z-index: 2;
-  position: absolute;
-  top: 150px;
-  left: 100px;
-  font-size: 2rem;
-  padding-left: 20px;
-  @media screen and (max-width: 600px) {
-    text-align: center;
-    bottom: 30%;
-    left: 7%;
-  }
-  @media screen and (max-width: 500px) {
-    top: 20%;
-    left: 12%;
-    width: 250px;
-  }
-  @media screen and (max-width: 360px) {
-    top: 20%;
-    left: 8%;
-    width: 250px;
-  }
+  position: relative;
+  top: -70vh;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Text = styled.h1`
   z-index: 2;
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
   color: #fff;
+  /* @media screen and (max-width: 444px) {
+    font-size: 1.5rem;
+  } */
 `;
 
 const Button = styled.button`

@@ -58,11 +58,11 @@ const ListItems = styled.ul`
 
 const Item = styled.li`
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--textColor);
   margin-bottom: 60px;
   font-size: 2rem;
   &:hover {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 `;
 

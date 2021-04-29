@@ -7,7 +7,6 @@ import { Fade } from "react-slideshow-image";
 
 const Container = styled.div`
   max-height: 100vh;
-
   width: 100%;
   position: relative;
   margin-top: -85px;
@@ -86,7 +85,7 @@ const Hero = () => {
         <GatsbyImage
           image={image}
           alt={altDescription}
-          imgStyle={{ filter: "brightness(45%)" }}
+          imgStyle={{ filter: "brightness(45%)", zIndex: "-5 !important" }}
         />
       </div>
     );

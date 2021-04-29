@@ -38,11 +38,15 @@ const ContactForm = styled.form`
   background: #fff;
 
   margin-top: 60px;
+  @media screen and (max-width: 981px) {
+    margin-top: 100px;
+    width: 90%;
+  }
   @media screen and (max-width: 900px) {
     margin-top: 570px;
     width: 90%;
   }
-  @media screen and (max-width: 493px) {
+  @media screen and (max-width: 495px) {
     margin-top: 700px;
   }
   @media screen and (max-width: 400px) {
@@ -143,7 +147,7 @@ const Contact = () => {
         method='post'
         data-netlify='true'>
         <input type='hidden' name='form-name' value='contact' />
-        <ContactTitle>Get in Touch</ContactTitle>
+        <ContactTitle>Contact Us</ContactTitle>
         <InputContainer>
           <HalfInput>
             <Label htmlFor='firstName'>First Name</Label>

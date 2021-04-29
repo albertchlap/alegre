@@ -19,8 +19,12 @@ const Container = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: space-between;
   width: 80%;
   margin: 0 auto;
+  @media screen and (max-width: 1299px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
@@ -31,7 +35,6 @@ const Title = styled.h1`
 const IntroContainer = styled.div`
   margin: 50px auto 0;
   padding: 30px;
-
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
@@ -39,21 +42,16 @@ const IntroContainer = styled.div`
   border-radius: var(--radius);
   margin-bottom: 30px;
   color: var(--textColor);
-  @media screen and (max-width: 619px) {
-    width: 90%;
-  }
 `;
 
 const CardsContainer = styled.div`
-  min-height: 800px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: -50px auto 0;
-  @media screen and (max-width: 1260px) {
+  justify-content: space-between;
+  margin-bottom: 45px;
+  @media screen and (max-width: 1050px) {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    align-items: center;
   }
 `;
 
@@ -65,11 +63,12 @@ const ImgContainer = styled.div`
 `;
 
 const Lcbo = styled.div`
-  margin: 50px 60px 30px;
+  margin: 50px 0 30px;
   padding: 30px;
   min-height: 650px;
+  max-width: 600px;
   color: var(--textColor);
-  /* transform: translate(-40px, 280px); */
+
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
@@ -80,45 +79,49 @@ const Lcbo = styled.div`
     text-align: start;
     margin-top: 70px;
   }
-  @media screen and (max-width: 1260px) {
-    margin-bottom: -20px;
+  @media screen and (max-width: 1400px) {
+    max-width: 500px;
   }
-
-  @media screen and (min-width: 620px) {
-    min-width: 450px;
+  @media screen and (max-width: 1299px) {
+    max-width: 450px;
   }
-  @media screen and (max-width: 619px) {
+  @media screen and (max-width: 1050px) {
+    max-width: 1000px;
+    width: 100%;
   }
 `;
 
 const Saq = styled.div`
-  margin: 50px 60px 30px;
+  margin: 50px 0 30px;
   padding: 30px;
   min-height: 650px;
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
+  border-radius: var(--radius);
   text-align: center;
   color: var(--textColor);
+  max-width: 600px;
 
   p {
     text-align: start;
     margin-top: 70px;
   }
-
-  @media screen and (min-width: 620px) {
-    min-width: 450px;
+  @media screen and (max-width: 1400px) {
+    max-width: 500px;
   }
-  @media screen and (max-width: 619px) {
-   ]
+  @media screen and (max-width: 1299px) {
+    max-width: 450px;
+  }
+  @media screen and (max-width: 1050px) {
+    max-width: 1000px;
+    width: 100%;
   }
 `;
 
 const BottomText = styled.div`
   padding: 30px;
-
   margin: 0 auto 60px;
   font-size: 1rem;
   background: #fff;
@@ -126,9 +129,6 @@ const BottomText = styled.div`
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
   border-radius: var(--radius);
   color: var(--textColor);
-  @media screen and (max-width: 619px) {
-    width: 94%;
-  }
 `;
 
 const Sales = () => {
@@ -207,6 +207,7 @@ const Sales = () => {
               </ImgContainer>
               <ReactMarkdown children={ontario} />
             </Lcbo>
+
             <Saq
               data-sal='slide-left'
               data-sal-delay='0'
