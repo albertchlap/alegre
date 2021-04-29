@@ -43,7 +43,7 @@ module.exports = {
         name: `Alegre Imports`,
         short_name: `Alegre Imports`,
         start_url: `/`,
-        background_color: `#c9d6ff`,
+        background_color: `#fee5b1`,
         theme_color: `#333`,
         display: `standalone`,
         icon: `src/assets/images/favicon.png`,
