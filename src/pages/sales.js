@@ -35,6 +35,7 @@ const Title = styled.h1`
 const IntroContainer = styled.div`
   margin: 50px auto 0;
   padding: 30px;
+
   font-size: 1rem;
   background: #fff;
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
@@ -42,12 +43,15 @@ const IntroContainer = styled.div`
   border-radius: var(--radius);
   margin-bottom: 30px;
   color: var(--textColor);
+  /* @media screen and (max-width: 619px) {
+    width: 90%;
+  } */
 `;
 
 const CardsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 45px;
+  padding-bottom: 45px;
   @media screen and (max-width: 1050px) {
     flex-direction: column;
     width: 100%;
@@ -66,7 +70,7 @@ const Lcbo = styled.div`
   margin: 50px 0 30px;
   padding: 30px;
   min-height: 650px;
-  max-width: 600px;
+  max-width: 500px;
   color: var(--textColor);
 
   font-size: 1rem;
@@ -78,9 +82,6 @@ const Lcbo = styled.div`
   p {
     text-align: start;
     margin-top: 70px;
-  }
-  @media screen and (max-width: 1400px) {
-    max-width: 500px;
   }
   @media screen and (max-width: 1299px) {
     max-width: 450px;
@@ -102,14 +103,11 @@ const Saq = styled.div`
   border-radius: var(--radius);
   text-align: center;
   color: var(--textColor);
-  max-width: 600px;
+  max-width: 500px;
 
   p {
     text-align: start;
     margin-top: 70px;
-  }
-  @media screen and (max-width: 1400px) {
-    max-width: 500px;
   }
   @media screen and (max-width: 1299px) {
     max-width: 450px;
