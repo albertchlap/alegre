@@ -71,7 +71,7 @@ const Label = styled.label`
 const Input = styled.input`
   margin-bottom: 8px;
   border-radius: 10px;
-  background-color: #f8f8f8;
+  background-color: #fff;
   border: 1px solid #333;
   outline: none;
   padding: 5px 10px;
@@ -151,27 +151,27 @@ const Contact = () => {
         <InputContainer>
           <HalfInput>
             <Label htmlFor='firstName'>First Name</Label>
-            <Input type='text' name='firstName' id='firstName' />
+            <Input type='text' name='firstName' id='firstName' required />
           </HalfInput>
           <HalfInput>
             <Label htmlFor='lastName'>Last Name</Label>
-            <Input type='text' name='lastName' id='lastName' />
+            <Input type='text' name='lastName' id='lastName' required />
           </HalfInput>
         </InputContainer>
         <InputContainer>
           <HalfInput>
             <Label htmlFor='email'>Email</Label>
-            <Input type='email' name='email' id='email' />
+            <Input type='email' name='email' id='email' required />
           </HalfInput>
           <HalfInput>
             <Label htmlFor='company'>Company</Label>
-            <Input type='text' name='company' id='company' />
+            <Input type='text' name='company' id='company' required />
           </HalfInput>
         </InputContainer>
         <InputContainer>
           <HalfInput>
             <Label htmlFor='country'>Country</Label>
-            <Input type='text' name='country' id='country' />
+            <Input type='text' name='country' id='country' required />
           </HalfInput>
           <HalfInput>
             <Label htmlFor='tel'>Phone Number</Label>
@@ -183,6 +183,7 @@ const Contact = () => {
           rows='10'
           cols='40'
           placeholder='Write Your Message...'
+          required
         />
         <Button type='submit'>Submit</Button>
       </ContactForm>

@@ -15,7 +15,7 @@ const Container = styled.header`
   align-items: center;
   width: 100%;
   z-index: 100;
-  background: #f0f0f0;
+  background: #fff;
   transition: top 0.3s ease;
   opacity: 1;
 `;
