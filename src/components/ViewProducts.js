@@ -46,16 +46,19 @@ const Text = styled.h1`
 const Button = styled.button`
   font-size: 1.4rem;
   z-index: 2;
-  background: ${props => props.primary && "none"};
+
+  background: #fff;
+  color: black;
   outline: none;
   border: 2px solid #fff;
-  color: #fff;
+  color: var(--textColor);
+  border-radius: var(--radius);
   padding: 15px 30px;
   cursor: pointer;
   transition: all 0.6s ease;
   &:hover {
-    background: #fff;
-    color: black;
+    background: none;
+    color: #fff;
   }
 `;
 
@@ -66,7 +69,7 @@ const ViewProducts = () => {
       <ContentWrapper>
         <Text>Brands We Represent</Text>
         <Link to='/portfolio'>
-          <Button primary>Our Portfolio</Button>
+          <Button>Our Portfolio</Button>
         </Link>
       </ContentWrapper>
     </Container>
