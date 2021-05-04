@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-anchor-links`,
     "gatsby-transformer-remark",
+    "gatsby-plugin-netlify-cache",
 
     {
       resolve: "gatsby-source-filesystem",
@@ -54,9 +55,8 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        // apiURL: "https://alegreimports.herokuapp.com",
         apiURL: process.env.DEPLOY_URL
-          ? "https://alegreimports.herokuapp.com"
+          ? process.env.DEPLOY_URL
           : "http://localhost:1337",
         queryLimit: 5000, // Default to 100
         contentTypes: [
